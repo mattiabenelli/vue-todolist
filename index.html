@@ -8,8 +8,10 @@
     <title>vue todo list</title>
 </head>
 <body>
-    <div id="play">
-
+    <div id="app">
+        <ul>
+            <li v-bind:class="(item.done) ? 'done' : ''" v-for="(item,index) in toDoList">{{ item.text }}</li>
+        </ul>
     </div>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>
