@@ -6,3 +6,6 @@
 .done{
     text-decoration: line-through;
 }
+.flex{
+    display: flex;
+}

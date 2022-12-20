@@ -5,15 +5,15 @@ createApp({
         return {
             toDoList: [
                 {
-                    text: 'fare la spesa',
+                    text: 'fare la spesa 1',
                     done: false,
                 },
                 {
-                    text: 'fare la spesa',
+                    text: 'fare la spesa 2',
                     done: false,
                 },
                 {
-                    text: 'fare la spesa',
+                    text: 'fare la spesa 3',
                     done: false,
                 }
                ]
@@ -21,8 +21,8 @@ createApp({
         }
     },
     methods: {
-        addTask(){
-            
+        deleteTask(index){
+            this.toDoList.splice(index, 1)
         }
     }
 }).mount('#app')
