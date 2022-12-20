@@ -11,10 +11,12 @@
     <div id="app">
         <ul>
             <li class="flex"  v-for="(item,index) in toDoList">
-                <div v-bind:class="(item.done) ? 'done' : ''"></divv-bind:class>{{ item.text }}</div>
+                <div v-bind:class="(item.done) ? 'done' : ''">{{ item.text }}</div>
                 <button @click="deleteTask">X</button>
             </li>
         </ul>
+        <input v-model="newText" placeholder="aggiungi una task">
+        <button @click="addTask">Add</button>
     </div>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>
