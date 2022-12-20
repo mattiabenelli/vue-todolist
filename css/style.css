@@ -9,3 +9,49 @@
 .flex{
     display: flex;
 }
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 80px auto;
+    border: 1px solid gainsboro;
+    padding: 20px 0;
+}
+.container ul{
+    width: 100%;
+    font-size: 20px;
+}
+.container li{
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+li button{
+    background-color: rgb(141, 2, 2);
+    border: 1px solid rgb(141, 2, 2);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+input{
+    background-color: white;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 10px;
+}  
+.input button{
+    background-color: cornflowerblue;
+    border: 1px solid cornflowerblue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+ }
+ .input{
+    display: flex;
+    gap: 20px;
+ }

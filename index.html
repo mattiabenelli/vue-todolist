@@ -9,14 +9,18 @@
 </head>
 <body>
     <div id="app">
-        <ul>
-            <li  class="flex"  v-for="(item,index) in toDoList">
-                <div @click="doneUndone(index)" v-bind:class="(item.done) ? 'done' : ''">{{ index+1 }} - {{ item.text }}</div>
-                <button @click="deleteTask(index)">X</button>
-            </li>
-        </ul>
-        <input @keyup.enter="addTask" v-model="newTask" placeholder="aggiungi una task">
-        <button @click="addTask">Add</button>
+        <div class="container">
+            <ul>
+                <li v-for="(item,index) in toDoList">
+                    <div @click="doneUndone(index)" v-bind:class="(item.done) ? 'done' : ''">{{ index+1 }} - {{ item.text }}</div>
+                    <button @click="deleteTask(index)">X</button>
+                </li>
+            </ul>
+            <div class="input">
+                <input @keyup.enter="addTask" v-model="newTask" placeholder="aggiungi una task">
+                <button @click="addTask">Add</button>
+            </div>
+        </div>
     </div>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>
