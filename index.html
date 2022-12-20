@@ -10,8 +10,8 @@
 <body>
     <div id="app">
         <ul>
-            <li class="flex"  v-for="(item,index) in toDoList">
-                <div v-bind:class="(item.done) ? 'done' : ''">{{ index+1 }} - {{ item.text }}</div>
+            <li  class="flex"  v-for="(item,index) in toDoList">
+                <div @click="doneUndone(index)" v-bind:class="(item.done) ? 'done' : ''">{{ index+1 }} - {{ item.text }}</div>
                 <button @click="deleteTask(index)">X</button>
             </li>
         </ul>

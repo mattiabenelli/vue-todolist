@@ -7,7 +7,7 @@ createApp({
             toDoList: [
                 {
                     text: 'fare la spesa 1',
-                    done: false,
+                    done: true,
                 },
                 {
                     text: 'fare la spesa 2',
@@ -32,6 +32,14 @@ createApp({
             }
             this.toDoList.push(item);
             this.newTask = '';
+        },
+        doneUndone(index){
+            if(this.toDoList[index].done == true){
+                this.toDoList[index].done = false
+            }
+            else if(this.toDoList[index].done == false){
+                this.toDoList[index].done = true
+            }
         }
     }
 }).mount('#app')
