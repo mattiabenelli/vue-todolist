@@ -26,7 +26,11 @@ createApp({
             this.toDoList.splice(index, 1)
         },
         addTask(){
-            this.toDoList.push(this.newTask);
+            const item ={
+                text:this.newTask,
+                done: false
+            }
+            this.toDoList.push(item);
             this.newTask = '';
         }
     }
