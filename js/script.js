@@ -34,11 +34,12 @@ createApp({
             this.newTask = '';
         },
         doneUndone(index){
-            if(this.toDoList[index].done == true){
-                this.toDoList[index].done = false
+            let task = this.toDoList[index]
+            if(task.done == true){
+                task.done = false
             }
-            else if(this.toDoList[index].done == false){
-                this.toDoList[index].done = true
+            else if(task.done == false){
+                task.done = true
             }
         }
     }
